@@ -16,7 +16,7 @@ M.defaults = {
   },
   -- leave nil when passing the spec as the first argument to setup()
   spec = nil, ---@type LazySpec
-  lockfile = vim.fn.stdpath("config") .. "/lazy-lock.json", -- lockfile generated after running update.
+  lockfile = vim.fn.stdpath("data") .. "/lazy-lock.json", -- lockfile generated after running update.
   concurrency = jit.os:find("Windows") and (vim.loop.available_parallelism() * 2) or nil, ---@type number limit the maximum amount of concurrent tasks
   git = {
     -- defaults for the `Lazy log` command
